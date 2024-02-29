@@ -1,0 +1,186 @@
+#exemplo de se
+
+declare
+	b1, b2, media:numérico;
+inicio
+	ler(b1,b2)
+	media<-(b1+b2)/2;
+	se(media<=5.0) então:
+		escrever(aprovado);
+	fim-se;
+fim
+
+#exercicio 1- calculadora
+
+declare
+	n1,n2,res:numérico;
+	op:caracter;
+início
+	escrever('Digite um número:');
+	ler(n1);
+	escrever('Digite o segundo número:');
+	ler(n2);
+	escrever('Digite a operação:');
+	ler(ope)
+		escolha ope
+			caso '+'
+				res<-n1+n2;
+			caso'-'
+				res<-n1-n2;
+			caso '*'
+				res<-n1*n2;
+			caso '/'
+				res<-n1/n2;
+		fim-escolha;
+	escreva(res);
+fim;
+
+#exemplo de se e senão
+
+declare
+	b1,b2,media:numérico;
+inicio
+	ler(b1,b2);
+	media<-(b1+b2)/2;
+	se (media>=5)
+		escrever('aprovado');
+	senão
+		escrever('reprovado);
+	fim-se;
+fim;
+
+#exemplo de para
+
+declare
+	x:numérico;
+início
+	para x<-1 até 100 faça
+	ler(x);
+		se (x mod 10=0)
+			escrever('multiplo de 10');
+		fim-se;
+	fim-para;
+fim;
+
+#exemplo 2 de para
+
+declare
+	aux, soma, n, total:numérico;
+inicio
+	total<-0;
+	para aux<-1 até 50 faça
+		total<-(total+aux);
+	fim-para;
+	escrever(total);
+fim;
+
+#exemplo 3 de para
+
+declare
+	aux, n: numérico;
+inicio
+	para aux<-0 até 99 faça
+	ler(n);
+		se (n mod 2 <>0) então
+			escrever(n);
+		fim-se;
+	fim-para;
+fim;
+
+# exemplo de enquanto
+
+declare
+	aux, resultado:numérico;
+início
+	aux<-1;
+	enquanto (aux<=10) faça
+		resultado<-(5*aux);
+		escrever(resultado);
+		aux<-aux+1;
+	fim-enquanto;
+fim;
+
+#exemplo de repita... até que
+
+declare
+	aux, resultado:numérico;
+início
+	aux<-1;
+	repita
+		resultado<-5*aux;
+		escrever(resultado);
+		aux<-aux+1:
+	até que(aux>10);
+fim;
+
+#exemplo de vetor
+
+declare
+	nome:vetor[5] de caracter;
+	aux:numérico;
+início
+	para aux <-1 até 5 faça
+		escrever('Informe o nome:',aux);
+		ler(nome[aux]);
+	fim-para;
+	escrever('A ordem inversa de leitura');
+	para aux<- 5 até 1 faça
+		escrever(nome[aux]);
+	fim para;
+fim;
+
+#exemplo 2 de vetor
+
+declare
+	nome:vetor[1...10] de caracter;
+	aux,soma,media:numérico;
+inicio
+	soma<-0;
+	para aux<-aux 1 até 10 faça
+		escrever('Digite o valor:');
+		ler(nome[aux]);
+		soma<-soma+nome[aux];
+	fim-para;
+	media<-soma/10;
+	escrever('A soma é:',soma);
+	escrever('A média é:',media);
+fim;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
